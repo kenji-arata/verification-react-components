@@ -1,23 +1,23 @@
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
     path: `${__dirname}/dist`,
-    filename: "main.js",
+    filename: 'main.js',
   },
   devServer: {
     static: {
-      directory: "./dist",
+      directory: './dist',
     },
     port: 3000,
     historyApiFallback: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
-  mode: "development",
+  mode: 'development',
   module: {
     rules: [
-      { test: /\.tsx$/, loader: "babel-loader", exclude: /node_modules/ },
+      { test: /\.(ts|tsx)$/, loader: 'babel-loader', exclude: /node_modules/ },
     ],
   },
-};
+}
